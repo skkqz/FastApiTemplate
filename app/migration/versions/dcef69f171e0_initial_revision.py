@@ -43,9 +43,9 @@ def upgrade() -> None:
             sa.column('updated_at', sa.TIMESTAMP),
         ),
         [
-            {"id": str(SystemRoles.USER), "name": "User"},
-            {"id": str(SystemRoles.MODERATOR), "name": "Moderator"},
-            {"id": str(SystemRoles.ADMIN), "name": "Admin"}
+            {'id': str(SystemRoles.USER), 'name': 'User'},
+            {'id': str(SystemRoles.MODERATOR), 'name': 'Moderator'},
+            {'id': str(SystemRoles.ADMIN), 'name': 'Admin'}
         ]
     )
 
