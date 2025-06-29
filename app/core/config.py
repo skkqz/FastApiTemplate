@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    BASE_DIR: str = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    BASE_DIR: str = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 
     # Блок настроек аутентификации
     SECRET_KEY: str
