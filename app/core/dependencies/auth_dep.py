@@ -43,7 +43,7 @@ async def check_refresh_token(
         if not user_id:
             raise NoJwtException
 
-        user = await UsersDAO(session).find_one_or_none_by_id(data_id=int(user_id))
+        user = await UsersDAO(session).find_one_or_none_by_id(data_id=user_id)
         if not user:
             raise NoJwtException
 
@@ -75,7 +75,7 @@ async def get_current_user(
     if not user_id:
         raise NoUserIdException
 
-    user = await UsersDAO(session).find_one_or_none_by_id(data_id=int(user_id))
+    user = await UsersDAO(session).find_one_or_none_by_id(data_id=user_id)
     if not user:
         raise UserNotFoundException
     return user
