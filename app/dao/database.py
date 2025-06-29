@@ -6,7 +6,7 @@ from sqlalchemy import func, TIMESTAMP, inspect
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase, declared_attr
 from sqlalchemy.ext.asyncio import AsyncAttrs, async_sessionmaker, create_async_engine, AsyncSession
-from app.config import database_url
+from app.core.config import database_url
 
 
 engine = create_async_engine(url=database_url)
